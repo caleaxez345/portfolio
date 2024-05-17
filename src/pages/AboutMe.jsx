@@ -1,5 +1,4 @@
 import React from "react";
-import { Download } from 'lucide-react';
 
 function AboutMe() {
     return( 

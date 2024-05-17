@@ -1,10 +1,10 @@
 import './App.css'
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Home from './Home';
-import Contact from './Contact';
-import AboutMe from './AboutMe';
-import Projects from './Projects';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Index from './pages/Index';
+import Contact from './pages/Contact';
+import AboutMe from './pages/AboutMe';
+import Projects from './pages/Projects';
 import { BrowserRouter, Route, Routes  } from 'react-router-dom';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Navbar/>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Index />} />
           <Route path='/about-me' element={<AboutMe />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
