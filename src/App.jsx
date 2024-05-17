@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './Header';
+import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './Home';
 import Contact from './Contact';
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Header/>
+      <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about-me' element={<AboutMe />} />
