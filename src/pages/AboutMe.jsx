@@ -1,17 +1,34 @@
 import React from "react";
 
 function AboutMe() {
-    return( 
-        <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">Hello there</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
+  return (
+  <div className="h-full w-full">
+    {/*Header*/}
+    <div className="container mx-auto my-8">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-fuchsia-600">So, Who am I?</h1>
       </div>
-    );
+    </div>
+    {/*Container for right and left side of the page*/}
+    <div className="container mx-auto flex justify-between">
+      {/*Left side of the about me page*/}
+      <div className="left-side w-1/2 p-4 border border-fuchsia-600">
+        <h2 className="text-xl font-bold mb-4">Placeholder</h2>
+        <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minima quasi eius, alias laudantium fuga. Ad explicabo repellat hic, tempora eaque asperiores optio saepe non, in veritatis deserunt voluptatum velit.</p>
+      </div>
+      {/*Add space between left and right side*/}
+      <div className="w-4"></div>
+      {/*Right side of the about me page*/}
+      <div className="right-side w-1/2 p-4 border border-fuchsia-600">
+        <h2 className="text-xl font-bold mb-4">Placeholder</h2>
+        <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minima quasi eius, alias laudantium fuga. Ad explicabo repellat hic, tempora eaque asperiores optio saepe non, in veritatis deserunt voluptatum velit.</p>
+      </div>
+    </div>
+    <div className="container mx-auto my-5 border border-fuchsia-600">
+        <h2 className="text-xl font-bold mb-4 mt-4 text-fuchsia-600 text-center">Professional Skillset</h2>
+      </div>
+  </div>
+  );
 }
 
 export default AboutMe;
