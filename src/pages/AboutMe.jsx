@@ -24,6 +24,7 @@ function AboutMe() {
         <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus minima quasi eius, alias laudantium fuga. Ad explicabo repellat hic, tempora eaque asperiores optio saepe non, in veritatis deserunt voluptatum velit.</p>
       </div>
     </div>
+    {/*Professional skillset container*/}
     <div className="container mx-auto my-5 border border-fuchsia-600">
         <h2 className="text-xl font-bold mb-4 mt-4 text-fuchsia-600 text-center">Professional Skillset</h2>
       </div>
