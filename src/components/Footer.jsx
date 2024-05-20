@@ -1,5 +1,6 @@
 import React from "react";
-import { GithubIcon, LinkedinIcon, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 function Footer () {
@@ -13,9 +14,9 @@ function Footer () {
         </nav> 
         <nav>
           <div className="grid grid-flow-col gap-4">
-          <GithubIcon />
-          <LinkedinIcon />
-          <Mail />
+          <FaGithub size={30}/>
+          <FaLinkedin size={30}/>
+          <CiMail size={30}/>
           <a></a>
           </div>
         </nav> 
