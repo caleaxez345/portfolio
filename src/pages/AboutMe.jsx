@@ -49,7 +49,7 @@ function AboutMe() {
           ))}
         </div>
         <h3 className="text-lg text-white text-center underline">Frameworks</h3>
-        {/*Framwork boxes*/}
+        {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
             <div key={index} className="w-60 bg-base-100, border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
