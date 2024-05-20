@@ -1,4 +1,5 @@
 import React from "react";
+import { programmingLanguages, databases, frameworks } from '../data/aboutMeData';
 
 function AboutMe() {
   return (
@@ -28,16 +29,34 @@ function AboutMe() {
       <div className="container mx-auto my-5 border border-blue-400">
         <h2 className="text-xl font-bold mb-4 mt-4 text-blue-400 text-center">Professional Skillset</h2>
         <h3 className="text-lg text-white text-center underline">Languages</h3>
+        {/*Language boxes*/}
         <div className="flex flex-wrap justify-center">
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title">Card title!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+          {programmingLanguages.item.map((language, index) => ( 
+            <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center">
+              <h2 className="text-white"> {language.name} </h2>
+              <language.icon size={48} />
             </div>
-          </div>
+          ))}
+        </div>
+        <h3 className="text-lg text-white text-center underline">Databases</h3>
+        {/*Database boxes*/}
+        <div className="flex flex-wrap justify-center">
+          {databases.item.map((database, index) => ( 
+            <div key={index} className="w-60 bg-base-100, border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <h2 className="text-white">{database.name}</h2>
+            <database.icon size={48} />
+            </div>
+          ))}
+        </div>
+        <h3 className="text-lg text-white text-center underline">Frameworks</h3>
+        {/*Framwork boxes*/}
+        <div className="flex flex-wrap justify-center">
+          {frameworks.item.map((framework, index) => ( 
+            <div key={index} className="w-60 bg-base-100, border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <h2 className="text-white">{framework.name}</h2>
+            <framework.icon size={48} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
