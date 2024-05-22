@@ -12,10 +12,8 @@ function AboutMe() {
         </div>
       </div>
       {/*Container for right and left side of the page*/}
-      {/* <div className="container mx-auto flex justify-between space-x-4"> */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between md:space-x-4">
         {/*Left side of the about me page*/}
-        {/* <div className="left-side w-1/2 p-4 border border-blue-400"> */}
         <div className="left-side w-full md:w-1/2 p-4 mt-2">
           <h2 className="text-2xl font-bold mb-4 text-blue-400">I'm Carlos Garcia Alavez</h2>
           <p className= "text-white text-xl">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
@@ -30,7 +28,6 @@ function AboutMe() {
           </ol>
         </div>
         {/*Right side of the about me page*/}
-        {/* <div className="right-side w-1/2 p-4 border border-blue-400"> */}
         <div className="right-side w-full md:w-1/2 p-4 flex justify-center items-center mt-4 md:mt-0">
           <img src={Photo} className="w-full max-h-[600px]" />
         </div>
