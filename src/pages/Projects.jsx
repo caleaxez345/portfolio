@@ -23,7 +23,7 @@ function Projects() {
                                 <h2 className="card-title text-white">{project.title}</h2>
                                 <p className="text-white">{project.description}</p>
                                 <div className="card-actions justify-center">
-                                    <a href={project.githubLink} className="btn btn-primary bg-white hover:bg-gray-200 border-2 border-blue-400" target="_blank" rel="noopener noreferrer">
+                                    <a href={project.githubLink} className="btn text-black bg-white hover:bg-gray-200 border-2 border-blue-400" target="_blank" rel="noopener noreferrer">
                                         <FaGithub size={20}/>Github
                                     </a>
                                 </div>

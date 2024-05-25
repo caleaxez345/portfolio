@@ -5,11 +5,15 @@ function Home() {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
-                <img src={Picture} className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={Picture}className="max-w-sm rounded-lg shadow-lg shadow-blue-400" />
                 <div>
                     <h1 className="text-5xl font-bold text-white">Welcome!</h1>
-                    <p className="py-6">My name is Carlos Garcia Alavez! I'm a Software Engineer who loves to work on creating new applications, and learning new technologies!</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <h1 className="py-6 text-5xl font-bold text-white">My name is Carlos Garcia Alavez!</h1>
+                    <p className="text-blue-400 text-3xl mb-4">Placeholder for typewriter text</p>
+                    <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-200">View Resume</button>
+                    <a href="/projects">
+                        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-200">View Projects</button>  
+                    </a>                     
                 </div>
             </div>
         </div>
