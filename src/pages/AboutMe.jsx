@@ -16,7 +16,7 @@ function AboutMe() {
         {/*Column for left side of the page*/}
         <div className="col-span-1 self-start mt-4">
           <div className="w-full p-4">
-            <h2 className="text-2xl font-bold mb-2 text-blue-400">Get to know who I am!</h2>
+            <h2 className="text-2xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
             <p className="text-xl">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
             <p className="text-xl mt-2">Currently I'm employed at Bank of America as a Software Engineer.</p>
             <p className="text-xl mt-2">I finished my Bachelor's Degree at UNC Charlotte and graduated Bachelors of Science in Computer Science with a concentration in Software Engineering!</p>
