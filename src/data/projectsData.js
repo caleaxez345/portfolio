@@ -7,7 +7,7 @@ const projectsData = [
 }, 
 {
     image: '/Project-Pics/QuickQollab.png',
-    title: 'QuickQollab',
+    title: 'quickqollab',
     description: 'Real time collaborative whiteboard where multiple users can work simultaneously and has chat feature!', 
     githubLink: 'https://github.com/ryanshz/quickqollab',
 }
