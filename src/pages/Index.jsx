@@ -7,8 +7,8 @@ function Home() {
             <div className="hero-content flex-col lg:flex-row">
                 <img src={Picture}className="max-w-sm rounded-lg shadow-lg shadow-blue-400" />
                 <div>
-                    <h1 className="text-5xl font-bold text-white">Welcome!</h1>
-                    <h1 className="py-6 text-5xl font-bold text-white">My name is Carlos Garcia Alavez!</h1>
+                    <h1 className="text-5xl font-bold">Welcome!</h1>
+                    <h1 className="py-6 text-5xl font-bold">My name is Carlos Garcia Alavez!</h1>
                     <p className="text-blue-400 text-3xl mb-4">Placeholder for typewriter text</p>
                     <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-200">View Resume</button>
                     <a href="/projects">
