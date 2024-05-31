@@ -24,7 +24,6 @@ function Home() {
                 <div>
                     <h1 className="text-5xl font-bold">Welcome!</h1>
                     <h1 className="py-6 text-5xl font-bold">My name is Carlos Garcia Alavez!</h1>
-                    {/* <p className="text-blue-400 text-3xl mb-4">Placeholder for typewriter text</p> */}
                     <div className="text-blue-400 text-3xl mb-4"> 
                         {typeWriter}
                     </div>
