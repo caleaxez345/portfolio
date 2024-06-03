@@ -30,7 +30,7 @@ function AboutMe() {
           </div>
         </div>
         {/*Column for right side of the page*/}
-        <div className="col-span-1 self-start">
+        <div className="col-span-1 self-start z-10">
           <div className="w-full p-4 flex justify-center items-center">
             <img src={Photo} className="h-[550px] w-4/6 rounded-xl" />
           </div>
