@@ -12,17 +12,17 @@ function App() {
   
   return (
     <>
-    <BrowserRouter>
-    <Particle/>
-      <Navbar/>
+      <BrowserRouter>
+        <Particle />
+        <Navbar />
         <Routes>
           <Route path='/' element={<Index />} />
           <Route path='/about-me' element={<AboutMe />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
         </Routes>
-      <Footer/>
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
