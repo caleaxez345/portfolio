@@ -8,7 +8,7 @@ function Contact() {
             <div className="grid grid-cols-2 gap-8 mx-4 my-10">
                 {/*Left side of page*/}
                 <div className="col-span-1 self-start">
-                    <h2 className="text-center text-blue-400 text-3xl mt-20 ">Let's keep in touch!</h2>
+                    <h2 className="text-center text-blue-400 text-3xl mt-20">Let's keep in touch!</h2>
                     <h2 className="text-center text-blue-400 text-3xl mt-2">Let's achieve great things together!</h2>
                     <p className="text-center text-xl mt-10">If you need any help or have any questions, send me an email and I'll be there as soon as possible to help!</p>
                 </div>
