@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
+import Logo from '/Logo/CGA_transparent.png'
 
 function Navbar() {
     const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('pageThemeIsDark')));
@@ -12,9 +13,11 @@ function Navbar() {
     }, [isDark])
     
     return (
-        <div className="navbar bg-base-300">
-            <div className="flex-1">
-                <a className="btn btn-ghost text-xl">Carlos Garcia Alavez</a>
+        <div className="navbar bg-base-300 h-24">
+            <div className="flex-1"> 
+                <Link to='/'>
+                    <img src={Logo} alt="Logo" className="h-48 w-48"></img>
+                </Link>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
