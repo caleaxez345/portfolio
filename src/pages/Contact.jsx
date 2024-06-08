@@ -13,7 +13,7 @@ function Contact() {
                     <p className="text-center text-xl mt-10">If you need any help or have any questions, send me an email and I'll be there as soon as possible to help!</p>
                 </div>
                 {/*Right side of page, email form*/}
-                <div className="col-span-1 border-2 border-blue-400 self-start rounded-lg shadow-md shadow-blue-400">
+                <div className="col-span-1 border-2 border-blue-400 self-start rounded-lg shadow-md shadow-blue-400 bg-base-100 relative">
                     <h2 className="text-blue-400 text-3xl text-center mt-4">Send me an email! 🚀</h2>
                     <div className="grid grid-cols-2 gap-2 mx-4 my-4">
                         <div className="col-span-1">
