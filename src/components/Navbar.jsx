@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import Logo from '/Logo/CGA_transparent.png'
+import iconBlack from '/Icon/Icon-Black.png'
+import iconWhite from '/Icon/Icon-White.png'
 
 function Navbar() {
     const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('pageThemeIsDark')));
+
     useEffect(() => {
         try{
             localStorage.setItem('pageThemeIsDark', JSON.stringify(isDark));
         } catch(e) {
             console.error('Failed to set page theme: ', e);
         }
-    }, [isDark])
+    }, [isDark]);
+
+    const setIcon = () => {
+        if(!isDark) {
+            return iconBlack;
+        } else {
+            return iconWhite;
+        }
+    }
     
     return (
-        <div className="navbar bg-base-300 h-24">
+        <div className="navbar bg-base-100 h-24">
             <div className="flex-1"> 
                 <Link to='/'>
-                    <img src={Logo} alt="Logo" className="h-48 w-48"></img>
+                    <img src={setIcon()} alt="Logo" className="h-24 w-36"></img>
                 </Link>
             </div>
             <div className="flex-none">
