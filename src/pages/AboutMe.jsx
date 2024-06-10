@@ -11,10 +11,10 @@ function AboutMe() {
           <h1 className="text-3xl font-bold text-blue-400">About Me</h1>
         </div>
       </div>
-      {/*Grid layout for right and left side of the page*/}
-      <div className="grid grid-cols-2 mx-4 gap-2">
-        {/*Column for left side of the page*/}
-        <div className="col-span-1 self-start mt-4">
+      {/*Flex box for right and left side of the page*/}
+      <div className="flex flex-row mx-4">
+        {/*flex box for left side of the page*/}
+        <div className="flex-1 flex flex-col justify-center items-center">
           <div className="w-full p-4">
             <h2 className="text-2xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
             <p className="text-xl">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
@@ -22,17 +22,17 @@ function AboutMe() {
             <p className="text-xl mt-2">I finished my Bachelor's Degree at UNC Charlotte and graduated Bachelors of Science in Computer Science with a concentration in Software Engineering!</p>
             <p className="text-xl mt-2">I started coding once I began College and I was just so interested in being able to create new applications and face those tought challenges that come with it and learn new technologies.</p>
             <p className="text-xl mt-2 mb-2">Now, apart from coding Here are some of my hobbies that I like to take part in!</p>
-            <ol class="list-disc ml-8">
+            <ol class="list-disc ml-10">
               <li className="text-xl">Video Games: Love me some good RPGS, my favorite game of all time is Persona 5 Royal!</li>
               <li className="text-xl">Lifting: Been lifting for about 3 years now, and I absolutely love it.</li>
               <li className="text-xl">Traveling: I've been to Mexico before, but now I want to visit new places like Europe, and Asia.</li>
             </ol>
           </div>
         </div>
-        {/*Column for right side of the page*/}
-        <div className="col-span-1 self-start z-10">
-          <div className="w-full p-4 flex justify-center items-center">
-            <img src={Photo} className="h-[550px] w-4/6 rounded-xl" />
+        {/*flex box for right side of the page*/}
+        <div className="flex-1 z-10">
+          <div className="w-full p-4 flex flex-col justify-center items-center">
+            <img src={Photo} className="h-[550px] w-4/6 rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
           </div>
         </div>
       </div>
