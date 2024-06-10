@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import iconBlack from '/Icon/Icon-Black.png'
-import iconWhite from '/Icon/Icon-White.png'
+import iconBlack from '/Icon/Icon-Black-Transparent.png'
+import iconWhite from '/Icon/Icon-White-Transparent.png'
 
 function Navbar() {
     const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('pageThemeIsDark')));
