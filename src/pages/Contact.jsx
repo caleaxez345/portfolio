@@ -5,7 +5,7 @@ function Contact() {
         <div className="w-full h-full">
             {/*Contact Page Header*/}
             <h1 className="text-center text-3xl font-bold text-blue-400 my-5 mx-auto">Contact Me</h1>
-            <div className="flex flex-col md:flex-row gap-8 mx-4 my-10">
+            <div className="flex flex-col lg:flex-row gap-8 mx-4 my-10">
                 {/*Left side of page*/}
                 <div className="flex-1 flex flex-col justify-center items-center">
                     <h2 className="text-center text-blue-400 text-3xl">Let's keep in touch!</h2>
