@@ -12,7 +12,7 @@ function AboutMe() {
         </div>
       </div>
       {/*Flex box for right and left side of the page*/}
-      <div className="flex flex-row mx-4">
+      <div className="flex flex-col lg:flex-row mx-4">
         {/*flex box for left side of the page*/}
         <div className="flex-1 flex flex-col justify-center items-center">
           <div className="w-full p-4">
@@ -32,7 +32,7 @@ function AboutMe() {
         {/*flex box for right side of the page*/}
         <div className="flex-1 z-10">
           <div className="w-full p-4 flex flex-col justify-center items-center">
-            <img src={Photo} className="h-[550px] w-4/6 rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
+            <img src={Photo} className="h-[650px] w-full rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
           </div>
         </div>
       </div>
@@ -43,7 +43,11 @@ function AboutMe() {
         {/*Language boxes*/}
         <div className="flex flex-wrap justify-center">
           {programmingLanguages.item.map((language, index) => ( 
-            <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center">
+            // <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center">
+            <div
+        key={index}
+        className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"
+      >
               <h2> {language.name} </h2>
               <language.icon size={48} />
             </div>
@@ -53,7 +57,7 @@ function AboutMe() {
         {/*Database boxes*/}
         <div className="flex flex-wrap justify-center">
           {databases.item.map((database, index) => ( 
-            <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
             <h2>{database.name}</h2>
             <database.icon size={48} />
             </div>
@@ -63,7 +67,7 @@ function AboutMe() {
         {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
             <h2>{framework.name}</h2>
             <framework.icon size={48} />
             </div>
