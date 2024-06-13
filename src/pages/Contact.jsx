@@ -4,26 +4,53 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
     const form = useRef();
     const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [subject, setSubject] = useState('');
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
+
+        resetForm();
+
+        //Sending email asynchronously, improves user experience
+        try{
+            await emailjs.sendForm(
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
+                form.current, {
+                publicKey: import.meta.env.VITE_PUBLIC_KEY
+            });
+            console.log('SUCCESS!');
+        } catch (error) {
+            console.log('FAILED...', error.text);
+        }
     
-        emailjs
-          .sendForm(
-            import.meta.env.VITE_SERVICE_ID, 
-            import.meta.env.VITE_TEMPLATE_ID, 
-            form.current, {
-            publicKey: import.meta.env.VITE_PUBLIC_KEY,
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
+        // emailjs
+        //   .sendForm(
+        //     import.meta.env.VITE_SERVICE_ID, 
+        //     import.meta.env.VITE_TEMPLATE_ID, 
+        //     form.current, {
+        //     publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        //   })
+        //   .then(
+        //     () => {
+        //       console.log('SUCCESS!');
+        //       resetForm();
+        //     },
+        //     (error) => {
+        //       console.log('FAILED...', error.text);
+        //     },
+        //   );
+    };
+
+    const resetForm = () => {
+        setEmail('');
+        setName('');
+        setPhoneNumber('');
+        setSubject('');
+        form.current.reset();
+    }
 
     return(
         <div className="w-full h-full">
@@ -43,14 +70,48 @@ const Contact = () => {
                         <div className="flex flex-col gap-3 mx-4 my-4">
                             <input type="hidden" name="to_name" value="Carlos Garcia Alavez"/>
                             <div className="flex flex-row gap-2">
-                                <input type="text" name="from_name" placeholder="Full Name" className="input input-bordered w-full max-w-xs" required/>
-                                <input type="text" name="from_phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" required/>
+                                <input 
+                                    type="text"
+                                    name="from_name" 
+                                    placeholder="Full Name" 
+                                    className="input input-bordered w-full max-w-xs" 
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
+                                <input type="text" 
+                                    name="from_phone" 
+                                    placeholder="Phone Number" 
+                                    className="input input-bordered w-full max-w-xs" 
+                                    value={phoneNumber}
+                                    onChange={(e) => setPhoneNumber(e.target.value)}
+                                    required
+                                />
                             </div>
-                            <input type="email" name="from_email" placeholder="Email" className="input input-bordered w-full" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                            <input type="email" 
+                                name="from_email" 
+                                placeholder="Email" 
+                                className="input input-bordered w-full" 
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)} 
+                                required
+                            />
                             <input type="hidden" name="reply_to" value={email}/>
-                            <textarea placeholder="Subject" name="message" className="input input-bordered w-full h-56 resize-none" required/>
+                            <textarea 
+                                placeholder="Subject" 
+                                name="message" 
+                                className="input input-bordered w-full h-56 resize-none" 
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
+                                required
+                            />
                             <div className="flex flex-row justify-center">
-                                <button type="submit" value="Send" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200">Send</button>
+                                <button 
+                                    type="submit" 
+                                    value="Send" 
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200">
+                                        Send
+                                </button>
                             </div>
                         </div>
                     </form>
