@@ -8,40 +8,26 @@ const Contact = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [subject, setSubject] = useState('');
 
-    const sendEmail = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
 
         resetForm();
-
-        //Sending email asynchronously, improves user experience
-        try{
-            await emailjs.sendForm(
-                import.meta.env.VITE_SERVICE_ID,
-                import.meta.env.VITE_TEMPLATE_ID,
-                form.current, {
-                publicKey: import.meta.env.VITE_PUBLIC_KEY
-            });
-            console.log('SUCCESS!');
-        } catch (error) {
-            console.log('FAILED...', error.text);
-        }
     
-        // emailjs
-        //   .sendForm(
-        //     import.meta.env.VITE_SERVICE_ID, 
-        //     import.meta.env.VITE_TEMPLATE_ID, 
-        //     form.current, {
-        //     publicKey: import.meta.env.VITE_PUBLIC_KEY,
-        //   })
-        //   .then(
-        //     () => {
-        //       console.log('SUCCESS!');
-        //       resetForm();
-        //     },
-        //     (error) => {
-        //       console.log('FAILED...', error.text);
-        //     },
-        //   );
+        emailjs
+          .sendForm(
+            import.meta.env.VITE_SERVICE_ID, 
+            import.meta.env.VITE_TEMPLATE_ID, 
+            form.current, {
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
     };
 
     const resetForm = () => {
