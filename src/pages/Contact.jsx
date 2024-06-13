@@ -1,15 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const form = useRef();
+    const [email, setEmail] = useState('');
 
     const sendEmail = (e) => {
         e.preventDefault();
     
         emailjs
-          .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-            publicKey: 'YOUR_PUBLIC_KEY',
+          .sendForm(
+            import.meta.env.VITE_SERVICE_ID, 
+            import.meta.env.VITE_TEMPLATE_ID, 
+            form.current, {
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
           })
           .then(
             () => {
@@ -37,14 +41,16 @@ const Contact = () => {
                     <h2 className="text-blue-400 text-3xl text-center mt-4">Send me an email! 🚀</h2>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className="flex flex-col gap-3 mx-4 my-4">
+                            <input type="hidden" name="to_name" value="Carlos Garcia Alavez"/>
                             <div className="flex flex-row gap-2">
-                                <input type="text" name="from_name" placeholder="Full Name" className="input input-bordered w-full max-w-xs" />
-                                <input type="text" name="from_phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
+                                <input type="text" name="from_name" placeholder="Full Name" className="input input-bordered w-full max-w-xs" required/>
+                                <input type="text" name="from_phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" required/>
                             </div>
-                            <input type="email" name="from_email" placeholder="Email" className="input input-bordered w-full" />
-                            <textarea placeholder="Subject" name="message" className="input input-bordered w-full h-56 resize-none" />
+                            <input type="email" name="from_email" placeholder="Email" className="input input-bordered w-full" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                            <input type="hidden" name="reply_to" value={email}/>
+                            <textarea placeholder="Subject" name="message" className="input input-bordered w-full h-56 resize-none" required/>
                             <div className="flex flex-row justify-center">
-                                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200">Send</button>
+                                <button type="submit" value="Send" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200">Send</button>
                             </div>
                         </div>
                     </form>
