@@ -17,11 +17,11 @@ function Contact() {
                     <h2 className="text-blue-400 text-3xl text-center mt-4">Send me an email! 🚀</h2>
                     <div className="flex flex-col gap-3 mx-4 my-4">
                         <div className="flex flex-row gap-2">
-                            <input type="text" placeholder="Full Name" className="input input-bordered w-full max-w-xs" />
-                            <input type="text" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
+                            <input type="text" name="from_name" placeholder="Full Name" className="input input-bordered w-full max-w-xs" />
+                            <input type="text" name="from_phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         </div>
-                        <input type="email" placeholder="Email" className="input input-bordered w-full" />
-                        <textarea placeholder="Subject" className="input input-bordered w-full h-56 resize-none" />
+                        <input type="email" name="from_email" placeholder="Email" className="input input-bordered w-full" />
+                        <textarea placeholder="Subject" name="message" className="input input-bordered w-full h-56 resize-none" />
                         <div className="flex flex-row justify-center">
                             <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200">Send</button>
                         </div>
