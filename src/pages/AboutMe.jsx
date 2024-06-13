@@ -32,7 +32,7 @@ function AboutMe() {
         {/*flex box for right side of the page*/}
         <div className="flex-1 z-10">
           <div className="w-full p-4 flex flex-col justify-center items-center">
-            <img src={Photo} className="h-[650px] w-full rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
+            <img src={Photo} className="h-[650px] w-11/12 rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
           </div>
         </div>
       </div>
