@@ -21,6 +21,14 @@ function Navbar() {
             return iconWhite;
         }
     }
+
+    const handleLinkClick = () => {
+        const detailsElement = document.getElementById('dropdown');
+        if (detailsElement) {
+            detailsElement.removeAttribute('open');
+        }
+    };
+
     return (
         <div className="navbar bg-base-100 h-24">
             <div className="flex-1"> 
@@ -28,18 +36,18 @@ function Navbar() {
                     <img src={setIcon()} alt="Logo" className="h-24 w-36"></img>
                 </Link>
             </div>
-            <div className="dropdown dropdown-left">
-                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden"> 
+            <details id="dropdown" className="dropdown dropdown-left">
+                <summary tabIndex={0} role="button" className="btn btn-ghost md:hidden"> 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
+                </summary>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about-me'>About Me</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
-                    <li><Link to='/projects'>Projects</Link></li>
+                    <li><Link to='/' onClick={handleLinkClick}>Home</Link></li>
+                    <li><Link to='/about-me' onClick={handleLinkClick}>About Me</Link></li>
+                    <li><Link to='/contact' onClick={handleLinkClick}>Contact</Link></li>
+                    <li><Link to='/projects' onClick={handleLinkClick}>Projects</Link></li>
                 </ul>
-            </div>
-            <div className="hidden lg:flex flex-none">
+            </details>
+            <div className="hidden md:flex flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <label className="swap swap-rotate">
                         <input 
