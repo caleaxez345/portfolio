@@ -20,7 +20,7 @@ function Home() {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
-                <img src={Picture}className="max-w-sm rounded-lg shadow-lg shadow-blue-400" />
+                <img src={Picture}className="max-w-sm rounded-lg shadow-lg shadow-blue-400 border border-blue-400" />
                 <div>
                     <h1 className="text-5xl font-bold">Welcome!</h1>
                     <h1 className="py-6 text-5xl font-bold">My name is Carlos Garcia Alavez!</h1>
