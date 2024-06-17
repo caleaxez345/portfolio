@@ -55,12 +55,12 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail}>
                         <div className="flex flex-col gap-3 mx-4 my-4">
                             <input type="hidden" name="to_name" value="Carlos Garcia Alavez"/>
-                            <div className="flex flex-row gap-2">
+                            <div className="flex flex-row space-x-4 justify-between">
                                 <input 
                                     type="text"
                                     name="from_name" 
                                     placeholder="Full Name" 
-                                    className="input input-bordered w-full max-w-xs" 
+                                    className="input input-bordered w-full" 
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required
@@ -68,7 +68,7 @@ const Contact = () => {
                                 <input type="text" 
                                     name="from_phone" 
                                     placeholder="Phone Number" 
-                                    className="input input-bordered w-full max-w-xs" 
+                                    className="input input-bordered w-full" 
                                     value={phoneNumber}
                                     onChange={(e) => setPhoneNumber(e.target.value)}
                                     required
