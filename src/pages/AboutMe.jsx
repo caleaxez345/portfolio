@@ -42,12 +42,10 @@ function AboutMe() {
         <h3 className="text-lg text-center underline">Languages</h3>
         {/*Language boxes*/}
         <div className="flex flex-wrap justify-center">
-          {programmingLanguages.item.map((language, index) => ( 
-            // <div key={index} className="w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center">
+          {programmingLanguages.item.map((language, index) => (
             <div
-        key={index}
-        className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"
-      >
+              key={index}
+              className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all">
               <h2> {language.name} </h2>
               <language.icon size={48} />
             </div>
@@ -57,7 +55,7 @@ function AboutMe() {
         {/*Database boxes*/}
         <div className="flex flex-wrap justify-center">
           {databases.item.map((database, index) => ( 
-            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2>{database.name}</h2>
             <database.icon size={48} />
             </div>
@@ -67,7 +65,7 @@ function AboutMe() {
         {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center"> 
+            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2>{framework.name}</h2>
             <framework.icon size={48} />
             </div>
