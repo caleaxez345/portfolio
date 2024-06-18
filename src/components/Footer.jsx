@@ -14,9 +14,9 @@ function Footer () {
         </nav> 
         <nav>
           <div className="grid grid-flow-col gap-4">
-          <a href='https://github.com/caleaxez345' target="_blank" rel="noopener noreferrer"><FaGithub size={30}/></a>
-          <a href='https://www.linkedin.com/in/carlos-garcia-alavez-a54166251/' target="_blank" rel="noopener noreferrer"><FaLinkedin size={30}/></a>
-          <Link to='/contact'><CiMail size={30}/></Link>
+          <a className="hover:scale-105 hover:transition-all" href='https://github.com/caleaxez345' target="_blank" rel="noopener noreferrer"><FaGithub size={30}/></a>
+          <a className="hover:scale-105 hover:transition-all" href='https://www.linkedin.com/in/carlos-garcia-alavez-a54166251/' target="_blank" rel="noopener noreferrer"><FaLinkedin size={30}/></a>
+          <Link to='/contact' className="hover:scale-105 hover:transition-all"><CiMail size={30}/></Link>
           </div>
         </nav> 
         <aside>
