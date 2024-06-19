@@ -42,7 +42,7 @@ function Navbar() {
                     <img src={setIcon()} alt="Logo" className="h-24 w-36"></img>
                 </Link>
             </div>
-            <label className="swap swap-rotate lg:hidden">
+            <label className="swap swap-rotate md:hidden">
                         <input 
                             type="checkbox" 
                             className="theme-controller" 
@@ -53,11 +53,11 @@ function Navbar() {
                         <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
             </label>
             <details id="dropdown" className="dropdown dropdown-bottom dropdown-end [&_.swap-on]:opacity-100 [&_.swap-off]:opacity-0 [&[open]_.swap-off]:opacity-100 [&[open]_.swap-on]:opacity-0 [&[open]_.swap-on]:rotate-90 [&[open]_.swap-off]:rotate-90">
-                <summary tabIndex={0} role="button" className="btn btn-ghost lg:hidden swap"> 
+                <summary tabIndex={0} role="button" className="btn btn-ghost md:hidden swap"> 
                         <AiOutlineClose className="swap-off fill-current h-5 w-5" />
                         <RxHamburgerMenu className="swap-on fill-current h-5 w-5" />
                 </summary>
-                <ul tabIndex={0} className="menu menu-lg dropdown-content mt-0 z-[1] p-2 shadow bg-base-100 rounded-box w-screen lg:hidden items-center">
+                <ul tabIndex={0} className="menu menu-lg dropdown-content mt-0 z-[1] p-2 shadow bg-base-100 rounded-box w-screen md:hidden items-center">
                     <li className="relative group">
                         <Link to='/' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
                         <IoHomeOutline size={20} /> 
@@ -88,7 +88,7 @@ function Navbar() {
                     </li>
                 </ul>
             </details>
-            <div className="hidden lg:flex flex-none">
+            <div className="hidden md:flex flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <label className="swap swap-rotate">
                         <input 
