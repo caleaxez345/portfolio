@@ -62,28 +62,28 @@ function Navbar() {
                         <Link to='/' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
                         <IoHomeOutline size={20} /> 
                             Home
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/about-me' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
                         <GoPerson size={20} /> 
                             About Me
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/contact' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
                             <CiMail size={20} /> 
                                 Contact
-                                <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                                <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/projects' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
                         <BsPersonWorkspace size={20} /> 
                             Projects
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                 </ul>
@@ -104,28 +104,28 @@ function Navbar() {
                         <Link to='/' className="group-hover:scale-105 hover:bg-transparent focus:outline-none focus:bg-transparent">                         
                         <IoHomeOutline size={25}/>
                             Home
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/about-me' className="group-hover:scale-105 hover:bg-transparent focus:outline-none focus:bg-transparent">
                         <GoPerson size={25}/> 
                             About Me
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/contact' className="group-hover:scale-105 hover:bg-transparent focus:outline-none focus:bg-transparent">
                         <CiMail size={25} /> 
                             Contact
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                     <li className="relative group">
                         <Link to='/projects' className="group-hover:scale-105 hover:bg-transparent focus:outline-none focus:bg-transparent">
                         <BsPersonWorkspace size={25} /> 
                             Projects
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-400 ease-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
                 </ul>
