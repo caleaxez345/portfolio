@@ -1,6 +1,7 @@
 import React from "react";
 import Picture from '/Professional-Pic/professional-photo.jpg';
 import Typewriter from 'typewriter-effect';
+import Resume from '/pdf/Resume.pdf'
 
 function Home() {
     const typeWriter = (
@@ -27,7 +28,7 @@ function Home() {
                     <div className="text-blue-400 text-3xl mb-4"> 
                         {typeWriter}
                     </div>
-                    <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-200 hover:border-blue-400 hover:scale-105 hover:transition-all">Download Resume</button>
+                    <a href={Resume} target="_blank" rel="noopener noreferrer" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-200 hover:border-blue-400 hover:scale-105 hover:transition-all">Download Resume</a>
                     <a href="/projects">
                         <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-200 hover:border-blue-400 hover:scale-105 hover:transition-all">View Projects</button>  
                     </a>                     
