@@ -150,7 +150,7 @@ const Contact = () => {
                                 <button 
                                     type="submit" 
                                     value="Send" 
-                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200 hover:border-blue-400">
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-200 hover:border-blue-400 hover:scale-105 hover:transition-all">
                                         <IoSendOutline size={20}/> Send
                                 </button>
                             </div>
