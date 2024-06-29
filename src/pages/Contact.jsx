@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { IoSendOutline } from "react-icons/io5";
+import { MdError } from "react-icons/md";
 
 const Contact = () => {
     const form = useRef();
@@ -99,52 +100,52 @@ const Contact = () => {
                         <div className="flex flex-col gap-3 mx-4 my-4">
                             <input type="hidden" name="to_name" value="Carlos Garcia Alavez" />
                             <div className="flex flex-row space-x-4 justify-between">
-                                <div className="w-full flex flex-col">
+                                <div className="w-full flex flex-col relative">
                                     <input
                                         type="text"
                                         name="from_name"
                                         placeholder="Full Name"
-                                        className="input input-bordered w-full"
+                                        className={`input input-bordered w-full rounded-lg ${errors.name ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`}
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         required
                                     />
-                                    {errors.name && <p className="text-red-500 text-center">{errors.name}</p>}
+                                    {errors.name && <p className="text-red-500">{errors.name}</p>}
                                 </div>
                                 <div className="w-full flex flex-col">
                                     <input type="text"
                                         name="from_phone"
                                         placeholder="Phone Number"
-                                        className="input input-bordered w-full"
+                                        className={`input input-bordered w-full rounded-lg ${errors.phoneNumber ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`}
                                         value={phoneNumber}
                                         onChange={(e) => setPhoneNumber(e.target.value)}
                                         required
                                     />
-                                    {errors.phoneNumber && <p className="text-red-500 text-center">{errors.phoneNumber}</p>}
+                                    {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
                                 </div>
                             </div>
                             <div className="w-full flex flex-col">
                                 <input type="email" 
                                     name="from_email" 
                                     placeholder="Email" 
-                                    className="input input-bordered w-full" 
+                                    className={`input input-bordered w-full rounded-lg ${errors.email ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`}
                                     value={email} 
                                     onChange={(e) => setEmail(e.target.value)} 
                                     required
                                 />
-                                {errors.email && <p className="text-red-500 text-center">{errors.email}</p>}
+                                {errors.email && <p className="text-red-500">{errors.email}</p>}
                             </div>
                             <input type="hidden" name="reply_to" value={email}/>
                             <div className="w-full flex flex-col">
                                 <textarea 
                                     placeholder="Subject" 
                                     name="message" 
-                                    className="input input-bordered w-full h-56 resize-none" 
+                                    className={`input input-bordered w-full h-56 resize-none ${errors.subject ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`} 
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
                                     required
                                 />
-                                {errors.subject && <p className="text-red-500 text-center">{errors.subject}</p>}
+                                {errors.subject && <p className="text-red-500">{errors.subject}</p>}
                             </div>
                             <div className="flex flex-row justify-center">
                                 <button 
