@@ -31,16 +31,24 @@ function App() {
       }
   }, [isDark]);
 
+    useEffect(() => {
+        try{
+            localStorage.setItem('pageThemeIsDark', JSON.stringify(isDark));
+        } catch(e) {
+            console.error('Failed to set page theme: ', e);
+        }
+    }, [isDark]);
+
  
   return (
     <>
     {isLoading ? ( 
-      <Preloader />
+      <Preloader theme={isDark  ? 'black' : 'light'} />
     ): (
       <BrowserRouter>
         <ScrollToTop>
           <Particle />
-            <Navbar />
+            <Navbar isDark={isDark} setIsDark={setIsDark} />
               <Routes>
                 <Route path='/' element={<Index />} />
                 <Route path='/about-me' element={<AboutMe />} />
