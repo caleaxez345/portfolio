@@ -10,15 +10,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = ({ isDark, setIsDark }) => {
-    // const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('pageThemeIsDark')));
-
-    // useEffect(() => {
-    //     try{
-    //         localStorage.setItem('pageThemeIsDark', JSON.stringify(isDark));
-    //     } catch(e) {
-    //         console.error('Failed to set page theme: ', e);
-    //     }
-    // }, [isDark]);
 
     const setIcon = () => {
         if(!isDark) {
