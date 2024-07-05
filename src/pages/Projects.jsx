@@ -15,7 +15,7 @@ function Projects() {
                     </div>
                 </div>
                 {/*Cards*/}
-                <div className="flex flex-wrap justify-center">
+                <div className="flex flex-col md:flex-row items-center justify-center">
                     {projectsData.map((project, index) => (
                         <div key={index} className="card w-96 bg-base-200 shadow-lg shadow-blue-400 mr-4 my-4 rounded-lg border border-blue-400 hover:scale-105 hover:transition-all">
                             <figure><img src={project.image} alt={project.title} /></figure>
