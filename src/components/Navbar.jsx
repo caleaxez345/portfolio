@@ -33,6 +33,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     <img src={setIcon()} alt="Logo" className="h-24 w-36"></img>
                 </Link>
             </div>
+            {/*Small menu which disppears when screen is md or larger*/}
             <label className="swap swap-rotate md:hidden">
                         <input 
                             type="checkbox" 
@@ -79,6 +80,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                     </li>
                 </ul>
             </details>
+            {/*Larger menu appears when medium or larger screen sizes*/}
             <div className="hidden md:flex flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <label className="swap swap-rotate">

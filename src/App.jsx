@@ -30,15 +30,6 @@ function App() {
           console.error('Failed to set page theme: ', e);
       }
   }, [isDark]);
-
-    useEffect(() => {
-        try{
-            localStorage.setItem('pageThemeIsDark', JSON.stringify(isDark));
-        } catch(e) {
-            console.error('Failed to set page theme: ', e);
-        }
-    }, [isDark]);
-
  
   return (
     <>
