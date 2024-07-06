@@ -45,7 +45,7 @@ function AboutMe() {
           {programmingLanguages.item.map((language, index) => (
             <div
               key={index}
-              className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all">
+              className="w-24 h-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all">
               <h2 className="text-center"> {language.name} </h2>
               <language.icon size={48} />
             </div>
@@ -55,7 +55,7 @@ function AboutMe() {
         {/*Database boxes*/}
         <div className="flex flex-wrap justify-center">
           {databases.item.map((database, index) => ( 
-            <div key={index} className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <div key={index} className="w-24 h-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2 className="text-center">{database.name}</h2>
             <database.icon size={48} />
             </div>
@@ -65,7 +65,7 @@ function AboutMe() {
         {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <div key={index} className="w-24 h-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-2 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2 className="text-center">{framework.name}</h2>
             <framework.icon size={48} />
             </div>
