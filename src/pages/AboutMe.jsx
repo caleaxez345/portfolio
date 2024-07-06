@@ -14,7 +14,7 @@ function AboutMe() {
       {/*Flex box for right and left side of the page*/}
       <div className="flex flex-col lg:flex-row mx-4">
         {/*flex box for left side of the page*/}
-        <div className="flex-1 flex">
+        <div className="flex-1 flex items-center justify-center">
           <div className="w-full p-4">
             <h2 className="text-xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
             <p className="text-lg">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
