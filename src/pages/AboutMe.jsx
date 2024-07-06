@@ -6,33 +6,33 @@ function AboutMe() {
   return (
     <div className="h-full w-full">
       {/*Header*/}
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-4">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-blue-400">About Me</h1>
+          <h1 className="text-2xl font-bold text-blue-400">About Me</h1>
         </div>
       </div>
       {/*Flex box for right and left side of the page*/}
       <div className="flex flex-col lg:flex-row mx-4">
         {/*flex box for left side of the page*/}
-        <div className="flex-1 flex flex-col justify-center items-center">
+        <div className="flex-1 flex">
           <div className="w-full p-4">
-            <h2 className="text-2xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
-            <p className="text-xl">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
-            <p className="text-xl mt-2">Currently I'm employed at Bank of America as a Software Engineer.</p>
-            <p className="text-xl mt-2">I finished my Bachelor's Degree at UNC Charlotte and graduated Bachelors of Science in Computer Science with a concentration in Software Engineering!</p>
-            <p className="text-xl mt-2">I started coding once I began College and I was just so interested in being able to create new applications and face those tought challenges that come with it and learn new technologies.</p>
-            <p className="text-xl mt-2 mb-2">Now, apart from coding Here are some of my hobbies that I like to take part in!</p>
-            <ol class="list-disc ml-10">
-              <li className="text-xl">Video Games: Love me some good RPGS, my favorite game of all time is Persona 5 Royal!</li>
-              <li className="text-xl">Lifting: Been lifting for about 3 years now, and I absolutely love it.</li>
-              <li className="text-xl">Traveling: I've been to Mexico before, but now I want to visit new places like Europe, and Asia.</li>
-            </ol>
+            <h2 className="text-xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
+            <p className="text-lg">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
+            <p className="text-lg">I started coding once I began College and I was just so interested in being able to create new applications and face those tough challenges that come with it and learn new technologies.</p>
+            <p className="text-lg my-4">Now, apart from coding Here are some of my hobbies that I like to take part in!</p>
+            <div className="flex justify-center">
+              <ol class="list-disc text-center">
+                <li className="text-lg">Video Games</li>
+                <li className="text-lg">Lifting Weights</li>
+                <li className="text-lg">Traveling</li>
+              </ol>
+            </div>
           </div>
         </div>
         {/*flex box for right side of the page*/}
         <div className="flex-1 z-10">
           <div className="w-full p-4 flex flex-col justify-center items-center">
-            <img src={Photo} className="h-[650px] w-11/12 rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
+            <img src={Photo} className="h-[500px] w-full rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
           </div>
         </div>
       </div>
@@ -45,8 +45,8 @@ function AboutMe() {
           {programmingLanguages.item.map((language, index) => (
             <div
               key={index}
-              className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all">
-              <h2> {language.name} </h2>
+              className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all">
+              <h2 className="text-center"> {language.name} </h2>
               <language.icon size={48} />
             </div>
           ))}
@@ -55,8 +55,8 @@ function AboutMe() {
         {/*Database boxes*/}
         <div className="flex flex-wrap justify-center">
           {databases.item.map((database, index) => ( 
-            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
-            <h2>{database.name}</h2>
+            <div key={index} className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <h2 className="text-center">{database.name}</h2>
             <database.icon size={48} />
             </div>
           ))}
@@ -65,8 +65,8 @@ function AboutMe() {
         {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-40 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
-            <h2>{framework.name}</h2>
+            <div key={index} className="w-24 lg:w-60 bg-base-100 border border-blue-400 mx-4 my-4 p-4 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <h2 className="text-center">{framework.name}</h2>
             <framework.icon size={48} />
             </div>
           ))}
