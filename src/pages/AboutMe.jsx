@@ -1,6 +1,8 @@
 import React from "react";
 import { programmingLanguages, databases, frameworks } from '../data/aboutMeData';
-import Photo from '/About-Me-Photo/About-Me-Pic.jpg';
+import Lottie from 'lottie-react';
+import animationData from '../assets/Coding-Animation.json';
+
 
 function AboutMe() {
   return (
@@ -31,8 +33,8 @@ function AboutMe() {
         </div>
         {/*flex box for right side of the page*/}
         <div className="flex-1 z-10">
-          <div className="w-full p-4 flex flex-col justify-center items-center">
-            <img src={Photo} className="h-[500px] w-full rounded-xl border-2 border-blue-400 shadow-lg shadow-blue-400" />
+          <div className="w-full flex flex-col justify-center items-center border-2 border-blue-400">
+            <Lottie animationData={animationData} className="h-[500px] w-full" />
           </div>
         </div>
       </div>
