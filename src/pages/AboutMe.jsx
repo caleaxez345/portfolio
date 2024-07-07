@@ -39,9 +39,6 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="my-8">
-        <div className="divider divider-info"></div>
-      </div>
       {/*Professional skillset container*/}
       <div className="container mx-auto my-5">
         <h2 className="text-2xl font-bold mb-4 mt-4 text-blue-400 text-center">Professional Skillset</h2>
