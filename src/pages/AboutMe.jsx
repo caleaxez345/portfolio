@@ -21,6 +21,7 @@ function AboutMe() {
             <h2 className="text-xl lg:text-2xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
             <p className="text-lg lg:text-xl">Hello everyone, I'm a 22 year old Software Engineer from Charlotte, NC.</p>
             <p className="text-lg lg:text-xl">I started coding once I began College and I was just so interested in being able to create new applications and face those tough challenges that come with it and learn new technologies.</p>
+            <p className="text-lg lg:text-xl my-4">I finished my Bachelor's Degree at UNC Charlotte and graduated Bachelors of Science in Computer Science with a concentration in Software Engineering!</p>
             <p className="text-lg lg:text-xl my-4">Now, apart from coding Here are some of my hobbies that I like to take part in!</p>
             <div className="flex justify-center">
               <ol class="list-disc text-blue-400">
@@ -38,6 +39,9 @@ function AboutMe() {
           </div>
         </div>
       </div>
+      <div className="my-8">
+        <div className="divider divider-info"></div>
+      </div>
       {/*Professional skillset container*/}
       <div className="container mx-auto my-5">
         <h2 className="text-2xl font-bold mb-4 mt-4 text-blue-400 text-center">Professional Skillset</h2>
@@ -48,7 +52,7 @@ function AboutMe() {
           {programmingLanguages.item.map((language, index) => (
             <div
               key={index}
-              className="w-36 h-28 lg:w-44 lg:h-32 xl:w-48 xl:h-36 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 xl:p-8 flex flex-col items-center hover:scale-105 hover:transition-all">
+              className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all">
               <h2 className="text-center lg:text-lg"> {language.name} </h2>
               <language.icon size={48} />
             </div>
@@ -58,7 +62,7 @@ function AboutMe() {
         {/*Database boxes*/}
         <div className="flex flex-wrap justify-center">
           {databases.item.map((database, index) => ( 
-            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 xl:w-48 xl:h-36 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 xl:p-8 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2 className="text-center lg:text-lg">{database.name}</h2>
             <database.icon size={48} />
             </div>
@@ -68,7 +72,7 @@ function AboutMe() {
         {/*Framework boxes*/}
         <div className="flex flex-wrap justify-center">
           {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 xl:w-48 xl:h-36 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 xl:p-8 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all"> 
             <h2 className="text-center lg:text-lg">{framework.name}</h2>
             <framework.icon size={48} />
             </div>
