@@ -39,43 +39,42 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      {/*Professional skillset container*/}
-      <div className="container mx-auto my-5">
-        <h2 className="text-2xl font-bold mb-4 mt-4 text-blue-400 text-center">Professional Skillset</h2>
+      {/*Professional skillset section*/}
+        <h2 className="text-2xl font-bold mb-4 mt-16 text-blue-400 text-center">Professional Skillset</h2>
         <h3 className="text-xl text-center underline">Languages</h3>
         {/*Language boxes*/}
-        <div className="flex flex-wrap justify-center">
-        {/* <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-0 justify-center"> */}
-          {programmingLanguages.item.map((language, index) => (
-            <div
-              key={index}
-              className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all">
-              <h2 className="text-center lg:text-lg"> {language.name} </h2>
-              <language.icon size={48} />
-            </div>
-          ))}
-        </div>
-        <h3 className="text-lg text-center underline">Databases</h3>
-        {/*Database boxes*/}
-        <div className="flex flex-wrap justify-center">
-          {databases.item.map((database, index) => ( 
-            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all"> 
-            <h2 className="text-center lg:text-lg">{database.name}</h2>
-            <database.icon size={48} />
-            </div>
-          ))}
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
+            {programmingLanguages.item.map((language, index) => (
+              <div
+                key={index}
+                className="w-40 h-28 md:w-48 md:h-32 bg-base-100 border border-blue-400 my-4 p-4 md:p-6 flex flex-col items-center hover:scale-105 hover:transition-all">
+                <h2 className="text-center lg:text-lg"> {language.name} </h2>
+                <language.icon size={48} />
+              </div>
+            ))}
         </div>
         <h3 className="text-lg text-center underline">Frameworks</h3>
         {/*Framework boxes*/}
-        <div className="flex flex-wrap justify-center">
-          {frameworks.item.map((framework, index) => ( 
-            <div key={index} className="w-36 h-28 lg:w-44 lg:h-32 bg-base-100 border border-blue-400 mx-4 my-4 p-4 lg:p-6 flex flex-col items-center hover:scale-105 hover:transition-all"> 
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
+        {frameworks.item.map((framework, index) => ( 
+            <div key={index} 
+            className="w-40 h-28 md:w-48 md:h-32 bg-base-100 border border-blue-400 my-4 p-4 md:p-6 flex flex-col items-center hover:scale-105 hover:transition-all">
             <h2 className="text-center lg:text-lg">{framework.name}</h2>
             <framework.icon size={48} />
             </div>
           ))}
         </div>
-      </div>
+        <h3 className="text-lg text-center underline">Databases</h3>
+        {/*Database boxes*/}
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
+        {databases.item.map((database, index) => ( 
+            <div key={index} 
+            className="w-40 h-28 md:w-48 md:h-32 bg-base-100 border border-blue-400 my-4 p-4 md:p-6 flex flex-col items-center hover:scale-105 hover:transition-all">
+            <h2 className="text-center lg:text-lg">{database.name}</h2>
+            <database.icon size={48} />
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
