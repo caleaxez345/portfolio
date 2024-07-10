@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import { programmingLanguages, databases, frameworks } from '../data/aboutMeData';
 import Lottie from 'lottie-react';
 import animationData from '../assets/Coding-Animation.json';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 
-function AboutMe() {
+const AboutMe = () => {
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  const languageRef = useRef(null);
+  const frameworkRef = useRef(null);
+  const databaseRef = useRef(null);
+  const isLeftInView = useInView(leftRef, { once: true, amount: 0.5 });
+  const isRightInView = useInView(rightRef, { once: true, amount: 0.5 });
+  const isLanguageInView = useInView(languageRef, { once: true, amount: 0.7 });
+  const isFrameworkInView = useInView(frameworkRef, { once: true, amount: 0.7 });
+  const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.7 });
+
   return (
-    <div className="min-h-screen h-full w-full">
+    <div className="h-full w-full">
       {/*Header*/}
       <div className="container mx-auto my-4">
         <div className="text-center">
@@ -19,9 +30,9 @@ function AboutMe() {
         {/*flex box for left side of the page*/}
         <div className="flex-1 flex items-center justify-center">
           <motion.div
+          ref={leftRef}
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          animate={isLeftInView ? { opacity: 1, x: 0} : {opacity: 0, x:-100}}
           transition={{ duration: 0.3}} 
           className="w-full p-4">
             <h2 className="text-xl lg:text-2xl font-bold mb-2 text-blue-400 text-center">Get to know who I am!</h2>
@@ -39,11 +50,11 @@ function AboutMe() {
           </motion.div>
         </div>
         {/*flex box for right side of the page*/}
-        <div className="z-10 flex-1 mt-14 md:mt-0">
+        <div className="z-10 flex-1">
           <motion.div 
+          ref={rightRef}
           initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.7 }}
+          animate={isRightInView ? { opacity: 1, x: 0} : { opacity: 0, x: 100}}
           transition={{ duration: 0.3 }}
           className="w-full flex flex-col justify-start items-center">
             <Lottie animationData={animationData} className="h-full w-full md:h-[350px]" />
@@ -55,9 +66,9 @@ function AboutMe() {
       <h3 className="text-xl text-center underline">Languages</h3>
         {/*Language boxes*/}
       <motion.div
+        ref={languageRef}
         initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
+        animate={isLanguageInView ? { opacity: 1, x: 0} : { opacity: 0, x: -100}}
         transition={{ duration: 0.3 }}
         className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
         {programmingLanguages.item.map((language, index) => (
@@ -75,9 +86,9 @@ function AboutMe() {
         <h3 className="text-lg text-center underline">Frameworks</h3>
         {/*Framework boxes*/}
         <motion.div 
+          ref={frameworkRef}
           initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.7 }}
+          animate={isFrameworkInView ? { opacity: 1, x: 0} : { opacity: 0, x: 100}}
           transition={{ duration: 0.3 }} 
           className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
         {frameworks.item.map((framework, index) => (
@@ -95,9 +106,9 @@ function AboutMe() {
         <h3 className="text-lg text-center underline">Databases</h3>
         {/*Database boxes*/}
       <motion.div
+        ref={databaseRef}
         initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
+        animate={isDatabaseInView ? { opacity: 1, x: 0} : { opacity: 0, x: -100}}
         transition={{ duration: 0.3 }}
         className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
         {databases.item.map((database, index) => (
