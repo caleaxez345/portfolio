@@ -5,9 +5,9 @@ import Particle from './Particles'
 
 const Preloader = ({ theme }) => {
   return (
-    <div className={`h-full w-full fixed inset-0 flex items-center justify-center z-50 ${theme === 'black' ? 'bg-white' : 'bg-black'}`}>
-      <Particle />
-      <Lottie animationData={animationData} />
+    <div className={`h-full w-full fixed inset-0 flex items-center justify-center z-50 bg-base-100 ${theme}`}>
+        <Particle />
+        <Lottie animationData={animationData} />
     </div>
   )
 }

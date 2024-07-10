@@ -30,12 +30,17 @@ function App() {
           console.error('Failed to set page theme: ', e);
       }
   }, [isDark]);
+
+  {/*If isDark set to light, if not set to black to the root element of the document */}
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'black')
+  }, [isDark])
  
   return (
     <>
     {isLoading ? ( 
       <Preloader theme={isDark  ? 'black' : 'light'} />
-    ): (
+    ) : (
       <BrowserRouter>
         <ScrollToTop>
           <Particle />
@@ -49,9 +54,9 @@ function App() {
           <Footer />
         </ScrollToTop>
       </BrowserRouter>
-      )}
+      )} 
     </>
-  )
+  );
 }
 
 export default App
