@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { IoSendOutline } from "react-icons/io5";
-import { MdError } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Contact = () => {
     const form = useRef();
@@ -89,9 +89,23 @@ const Contact = () => {
             <div className="flex flex-col lg:flex-row gap-8 mx-4 my-10">
                 {/*Left side of page*/}
                 <div className="flex-1 flex flex-col justify-center items-center">
-                    <h2 className="text-center text-blue-400 text-3xl">Let's keep in touch!</h2>
-                    <h2 className="text-center text-blue-400 text-3xl mt-2">Let's achieve great things together!</h2>
-                    <p className="text-center text-xl mt-10">If you need any help or have any questions, send me an email and I'll respond as soon as possible!</p>
+                    <motion.div
+                    initial={{  opacity: 0, y: 50}}
+                    whileInView={{ opacity: 1, y:0}}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    >
+                        <h2 className="text-center text-blue-400 text-3xl">Let's keep in touch!</h2>
+                        <h2 className="text-center text-blue-400 text-3xl mt-2">Let's achieve great things together!</h2>
+                    </motion.div>
+                    <motion.p
+                        initial={{  opacity: 0, y: 50}}
+                        whileInView={{ opacity: 1, y:0}}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7 }}
+                        className="text-center text-xl mt-10">
+                            If you need any help or have any questions, send me an email and I'll respond as soon as possible!
+                    </motion.p>
                 </div>
                 {/*Right side of page, email form*/}
                 <div className="flex-1 border-2 border-blue-400 rounded-lg shadow-lg shadow-blue-400 bg-base-100 relative">
