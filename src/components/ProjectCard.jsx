@@ -12,7 +12,7 @@ const ProjectCard = ({ project, index }) => {
             ref={ref}
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, type: "spring", damping: 10, stiffness: 200 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 1.1 }}
             className="card w-80 sm:w-96 bg-base-200 shadow-lg shadow-blue-400 mx-6 my-10 rounded-lg border border-blue-400"
