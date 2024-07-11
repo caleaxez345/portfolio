@@ -49,37 +49,33 @@ const Navbar = ({ isDark, setIsDark }) => {
                         <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
             </label>
             <details id="dropdown" className="dropdown dropdown-bottom dropdown-end [&_.swap-on]:opacity-100 [&_.swap-off]:opacity-0 [&[open]_.swap-off]:opacity-100 [&[open]_.swap-on]:opacity-0 [&[open]_.swap-on]:rotate-90 [&[open]_.swap-off]:rotate-90">
-                <summary tabIndex={0} role="button" className="btn btn-ghost md:hidden swap"> 
+                <summary className="btn btn-ghost swap md:hidden"> 
                         <AiOutlineClose className="swap-off fill-current h-5 w-5" />
                         <RxHamburgerMenu className="swap-on fill-current h-5 w-5" />
                 </summary>
-                <ul tabIndex={0} className="menu menu-lg dropdown-content mt-0 z-[1] p-2 shadow bg-base-100 rounded-box w-screen md:hidden items-center">
-                    <li className="relative group">
-                        <Link to='/' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
-                        <IoHomeOutline size={20} /> 
-                            Home
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
+                <ul className="menu menu-lg dropdown-content mt-0 z-[1] p-2 shadow bg-base-100 rounded-box w-screen md:hidden items-center">
+                    <li>
+                        <Link to='/' onClick={handleLinkClick}>
+                            <IoHomeOutline size={20} /> 
+                                Home
                         </Link>
                     </li>
-                    <li className="relative group">
-                        <Link to='/about-me' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
-                        <GoPerson size={20} /> 
-                            About Me
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
+                    <li>
+                        <Link to='/about-me' onClick={handleLinkClick}>
+                            <GoPerson size={20} /> 
+                                About Me
                         </Link>
                     </li>
-                    <li className="relative group">
-                        <Link to='/contact' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
+                    <li>
+                        <Link to='/contact' onClick={handleLinkClick}>
                             <CiMail size={20} /> 
                                 Contact
-                                <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
                         </Link>
                     </li>
-                    <li className="relative group">
-                        <Link to='/projects' onClick={handleLinkClick} className="group-hover:scale-105 hover:bg-transparent">
-                        <BsPersonWorkspace size={20} /> 
-                            Projects
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] rounded-xl bg-blue-400 transition-all duration-500 ease-out group-hover:w-full"></span>
+                    <li>
+                        <Link to='/projects' onClick={handleLinkClick}>
+                            <BsPersonWorkspace size={20} /> 
+                                Projects
                         </Link>
                     </li>
                 </ul>

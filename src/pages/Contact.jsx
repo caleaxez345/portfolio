@@ -154,7 +154,7 @@ const Contact = () => {
                                 <textarea 
                                     placeholder="Subject" 
                                     name="message" 
-                                    className={`input input-bordered w-full h-56 resize-none ${errors.subject ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`} 
+                                    className={`pt-2 input input-bordered w-full h-56 resize-none ${errors.subject ? 'border-red-500 focus:border-red-500 focus:outline-none' : ''}`} 
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
                                     required
