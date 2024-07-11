@@ -13,9 +13,9 @@ const AboutMe = () => {
   const databaseRef = useRef(null);
   const isLeftInView = useInView(leftRef, { once: true, amount: 0.5 });
   const isRightInView = useInView(rightRef, { once: true, amount: 0.5 });
-  const isLanguageInView = useInView(languageRef, { once: true, amount: 0.7 });
-  const isFrameworkInView = useInView(frameworkRef, { once: true, amount: 0.7 });
-  const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.7 });
+  const isLanguageInView = useInView(languageRef, { once: true, amount: 0.5 });
+  const isFrameworkInView = useInView(frameworkRef, { once: true, amount: 0.5 });
+  const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.5 });
 
   return (
     <div className="h-full w-full overflow-x-hidden">

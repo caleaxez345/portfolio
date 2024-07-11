@@ -68,25 +68,33 @@ function Home() {
                         </div>
                         <a href={Resume} target="_blank" rel="noopener noreferrer"
                             className="inline-block">
-                            <motion.button
-                                initial={{ opacity: 0, x: 100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.7 }}
-                                className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-400 hover:border-blue-400">
-                                <IoMdPaper className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" /> View Resume
-                            </motion.button>
+                            <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.7 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.5, type: "spring", stiffness: 300, damping: 10 } }}
+                            > 
+                                <button
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-400 hover:border-blue-400">
+                                    <IoMdPaper className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" /> View Resume
+                                </button>
+                            </motion.div>
                         </a>
                         <Link to="/projects" className="inline-block">
-                            <motion.button
-                                initial={{ opacity: 0, x: 100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true, amount: 0.5 }}
-                                transition={{ duration: 0.9 }}
-                                className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-400 hover:border-blue-400">
-                                <BsPersonWorkspace className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
-                                View Projects
-                            </motion.button>
+                            <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.9 }}
+                            whileHover={{ scale: 1.1, transition: { duration: 0.5, type: "spring", stiffness: 300, damping: 10 } }}
+                            >
+                                <button
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-400 hover:border-blue-400">
+                                    <BsPersonWorkspace className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
+                                    View Projects
+                                </button>
+                            </motion.div>
                         </Link>
                     </div>
                 </div>
