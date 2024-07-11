@@ -76,7 +76,7 @@ function Home() {
                             whileHover={{ scale: 1.1, transition: { duration: 0.5, type: "spring", stiffness: 300, damping: 10 } }}
                             > 
                                 <button
-                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-400 hover:border-blue-400">
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black hover:bg-gray-400 hover:border-blue-400 rounded-md">
                                     <IoMdPaper className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" /> View Resume
                                 </button>
                             </motion.div>
@@ -90,7 +90,7 @@ function Home() {
                             whileHover={{ scale: 1.1, transition: { duration: 0.5, type: "spring", stiffness: 300, damping: 10 } }}
                             >
                                 <button
-                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-400 hover:border-blue-400">
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-4 border-2 border-blue-400 bg-white text-black ml-4 hover:bg-gray-400 hover:border-blue-400 rounded-md">
                                     <BsPersonWorkspace className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
                                     View Projects
                                 </button>
