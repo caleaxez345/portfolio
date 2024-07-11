@@ -18,7 +18,7 @@ const AboutMe = () => {
   const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.7 });
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full overflow-x-hidden">
       {/*Header*/}
       <div className="container mx-auto my-4">
         <div className="text-center">
