@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
-import iconBlack from '/Icon/Icon-Black-Transparent.png'
-import iconWhite from '/Icon/Icon-White-Transparent.png'
+import { Link } from 'react-router-dom';
+import iconBlack from '/Icon/Icon-Black-Transparent.png';
+import iconWhite from '/Icon/Icon-White-Transparent.png';
 import { GoPerson } from "react-icons/go";
 import { IoHomeOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
@@ -17,7 +17,7 @@ const Navbar = ({ isDark, setIsDark }) => {
         } else {
             return iconWhite;
         }
-    }
+    };
 
     const handleLinkClick = () => {
         const detailsElement = document.getElementById('dropdown');

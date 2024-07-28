@@ -2,8 +2,10 @@ import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { IoSendOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Contact = () => {
+const Contact = ({ isDark }) => {
     const form = useRef();
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -49,13 +51,24 @@ const Contact = () => {
 
         setErrors(formErrors);
         return isValid;
-    }
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
 
         if (validateForm()) {
             resetForm();
+            toast.success("Your message has been sent! I'll get back to you soon!", {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: isDark ? "light" : "dark",
+                transition: Bounce,
+            });
             emailjs
                 .sendForm(
                     import.meta.env.VITE_SERVICE_ID,
@@ -80,11 +93,12 @@ const Contact = () => {
         setPhoneNumber('');
         setSubject('');
         form.current.reset();
-    }
+    };
 
     return(
         <div className="w-full h-full">
             {/*Contact Page Header*/}
+            <ToastContainer />
             <h1 className="text-center text-3xl font-bold text-blue-400 my-5 mx-auto">Contact Me</h1>
             <div className="flex flex-col lg:flex-row gap-8 mx-4 my-10">
                 {/*Left side of page*/}
@@ -165,7 +179,8 @@ const Contact = () => {
                                 <button 
                                     type="submit" 
                                     value="Send" 
-                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-400 hover:border-blue-400 hover:scale-105 hover:transition-all">
+                                    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-white text-black border-2 border-blue-400 hover:bg-gray-400 hover:border-blue-400 hover:scale-105 hover:transition-all"
+                                    >
                                         <IoSendOutline size={20}/> Send
                                 </button>
                             </div>

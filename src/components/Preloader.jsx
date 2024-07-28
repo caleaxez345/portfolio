@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import Lottie from 'lottie-react';
 import animationData from '../assets/Loading-animation.json';
-import Particle from './Particles'
+import Particle from './Particles';
 
 const Preloader = ({ theme }) => {
   return (

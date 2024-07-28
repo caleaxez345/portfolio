@@ -1,6 +1,6 @@
 import React from "react";
 import Picture from '/Professional-Pic/professional-photo.jpg';
-import smallPicture from '/Professional-Pic/professional-photo-small.jpg'
+import smallPicture from '/Professional-Pic/professional-photo-small.jpg';
 import Typewriter from 'typewriter-effect';
 import Resume from '/pdf/Resume.pdf'
 import { IoMdPaper } from "react-icons/io";

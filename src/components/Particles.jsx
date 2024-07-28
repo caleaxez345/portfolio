@@ -556,7 +556,7 @@ function Particle() {
             options={options}
         />
         );
-    }
+    };
     
     return <></>;
 };

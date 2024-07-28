@@ -48,7 +48,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Index />} />
                 <Route path='/about-me' element={<AboutMe />} />
-                <Route path='/contact' element={<Contact />} />
+                <Route path='/contact' element={<Contact isDark={isDark} />} />
                 <Route path='/projects' element={<Projects />} />
               </Routes>
           <Footer />
