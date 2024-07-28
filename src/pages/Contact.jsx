@@ -58,7 +58,7 @@ const Contact = ({ isDark }) => {
 
         if (validateForm()) {
             resetForm();
-            toast.success("Your message has been sent! I'll get back to you soon!", {
+            toast.success("Your email has been sent! I'll get back to you soon!", {
                 position: "top-center",
                 autoClose: 4000,
                 hideProgressBar: false,
